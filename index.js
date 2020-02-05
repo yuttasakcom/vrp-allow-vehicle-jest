@@ -10,7 +10,10 @@ export const allowVehicles = (locations = [], vehicles = []) => {
       const hasSkill = locations[indexLocation].skills.every(skill =>
         vehicles[indexVehicle].skills.includes(skill)
       )
-      if (hasSkill) {
+      const hasSlots = locations[indexLocation].slots.every(slot =>
+        vehicles[indexVehicle].slots.includes(slot)
+      )
+      if (hasSkill && hasSlots) {
         ans[indexLocation].allow.push(indexVehicle)
       }
     }
