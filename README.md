@@ -1,5 +1,9 @@
 # VRP Allow Vehicles
 
+```bash
+$ npm install && npm run test
+```
+
 ## Logical
 
 ```javascript
