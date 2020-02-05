@@ -1,21 +1,21 @@
-export const allowVehicles = (location, vehicle) => {
+export const allowVehicles = (locations = [], vehicles = []) => {
+  let ans = []
   for (
     let indexLocation = 0;
-    indexLocation < location.length;
+    indexLocation < locations.length;
     indexLocation++
   ) {
-    for (let indexVehicle = 0; indexVehicle < vehicle.length; indexVehicle++) {
-      const allowSlot = location[indexLocation].slot.every(l =>
-        vehicle[indexVehicle].slot.includes(l)
+    for (let indexVehicle = 0; indexVehicle < vehicles.length; indexVehicle++) {
+      const hasSkill = locations[indexLocation].skills.every(skill =>
+        vehicles[indexVehicle].skills.includes(skill)
       )
-      const allowSkills = location[indexLocation].skills.every(l =>
-        vehicle[indexVehicle].skills.includes(l)
-      )
-      if (allowSlot && allowSkills) {
-        location[indexLocation].allow.push(indexVehicle)
+      if (hasSkill) {
+        ans[indexLocation] = [indexVehicle]
+      } else {
+        ans[indexLocation] = []
       }
     }
   }
 
-  return [...location.map(o => o.allow)]
+  return ans
 }

@@ -4,8 +4,10 @@
   "description": "## Improve Test with Jest",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test-watch": ""
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,10 @@
     "url": "https://github.com/yuttasakcom/vrp-allow-vehicle-jest/issues"
   },
   "homepage": "https://github.com/yuttasakcom/vrp-allow-vehicle-jest#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-jest": "^25.1.0",
     "jest": "^25.1.0"
   }
 }
