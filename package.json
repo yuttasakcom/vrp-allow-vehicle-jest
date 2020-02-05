@@ -1,0 +1,24 @@
+{
+  "name": "vrp-allow-vehicle-jest",
+  "version": "1.0.0",
+  "description": "## Improve Test with Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test-watch": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuttasakcom/vrp-allow-vehicle-jest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuttasakcom/vrp-allow-vehicle-jest/issues"
+  },
+  "homepage": "https://github.com/yuttasakcom/vrp-allow-vehicle-jest#readme",
+  "dependencies": {
+    "jest": "^25.1.0"
+  }
+}
